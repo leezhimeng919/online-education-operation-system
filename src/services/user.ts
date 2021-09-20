@@ -7,7 +7,7 @@ interface User {
   password: string
 }
 
-export const login = (data: User) => {
+export const login = (data: User): any => {
   return request({
     method: 'POST',
     url: '/front//user/login',
