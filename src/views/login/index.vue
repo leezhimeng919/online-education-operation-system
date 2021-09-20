@@ -68,10 +68,8 @@ export default Vue.extend({
         } else {
           // 持久化用户信息
           this.getUser(data.content)
-          // 登录成功 跳到首页
-          this.$router.push({
-            path: '/'
-          })
+          // 登录成功 跳到到之前访问的页面
+          this.$router.push(this.$route.query.redirect as string || '/')
           this.$message.success('登录成功')
         }
         //      成功或者失败

@@ -7,7 +7,7 @@ interface User {
   password: string
 }
 
-export const login = (data: User): any => {
+export const login = (data: User) => {
   return request({
     method: 'POST',
     url: '/front//user/login',
@@ -16,5 +16,12 @@ export const login = (data: User): any => {
     // axios把普通对象转成application/json
     // query string转成x-www-form-urlencoded
     data: qs.stringify(data)
+  })
+}
+
+export const getInfo = () => {
+  return request({
+    method: 'GET',
+    url: '/front//user/getInfo'
   })
 }
