@@ -15,15 +15,6 @@ yarn serve
 yarn build
 ```
 
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-
 ## TODO
 ### 用户登录
 1. 处理application/json为application/x-www-form-urlencoded格式
