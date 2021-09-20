@@ -5,8 +5,13 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    user: JSON.parse(localStorage.getItem('user') || 'null')
   },
   mutations: {
+    getUser (state, payload: string) {
+      state.user = JSON.parse(payload)
+      localStorage.setItem('user', payload)
+    }
   },
   actions: {
   },
