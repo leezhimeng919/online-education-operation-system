@@ -54,7 +54,7 @@ export default Vue.extend({
     }
   },
   methods: {
-    ...mapMutations(['getUser']),
+    ...mapMutations(['setUser']),
     async onSubmit () {
       try {
         // 1. 表单验证
@@ -67,7 +67,7 @@ export default Vue.extend({
           this.$message.error(data.message)
         } else {
           // 持久化用户信息
-          this.getUser(data.content)
+          this.setUser(data.content)
           // 登录成功 跳到到之前访问的页面
           this.$router.push(this.$route.query.redirect as string || '/')
           this.$message.success('登录成功')

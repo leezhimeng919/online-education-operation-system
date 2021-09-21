@@ -33,6 +33,7 @@ export default Vue.extend({
   },
   created () {
     this.getUserInfo()
+    this.getUserInfo()
   },
   methods: {
     async getUserInfo () {
@@ -51,7 +52,7 @@ export default Vue.extend({
           type: 'success',
           message: '退出成功!'
         })
-        this.$store.commit('getUser', null)
+        this.$store.commit('setUser', null)
         this.$router.push({
           name: 'login'
         })
