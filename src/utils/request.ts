@@ -73,14 +73,12 @@ request.interceptors.response.use(function (response) { // 状态码为 2xx 都�
           }
           // 刷新 token 成功了
           store.commit('setUser', res.data.content)
-          console.log(requests)
           // 把 requests 队列中的请求重新发出去
           requests.forEach(cb => cb())
           // 重置 requests 数组
           requests = []
           return request(error.config)
-        }).catch(err => {
-          console.log(err)
+        }).catch(error => {
           store.commit('setUser', null)
           redirectLogin()
           return Promise.reject(error)

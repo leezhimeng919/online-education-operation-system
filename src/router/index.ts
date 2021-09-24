@@ -78,7 +78,6 @@ const router = new VueRouter({
 // next：通行的标志
 
 router.beforeEach((to, from, next) => {
-  console.log(to)
   if (to.matched.some(route => route.meta.requiresAuth)) {
     // 访问的路径中有一个需要登录的
     if (!store.state.user) {
