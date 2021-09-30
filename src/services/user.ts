@@ -26,7 +26,7 @@ export const getInfo = (): any => {
   })
 }
 
-export const getUserPages = (data: any) => {
+export const getUserPages = (data: any): any => {
   return request({
     method: 'POST',
     url: '/boss/user/getUserPages',
@@ -34,7 +34,7 @@ export const getUserPages = (data: any) => {
   })
 }
 
-export const forbidUser = (userId: string | number) => {
+export const forbidUser = (userId: string | number): any => {
   return request({
     method: 'POST',
     url: '/boss/user/forbidUser',
